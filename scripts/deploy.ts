@@ -7,8 +7,8 @@ async function main() {
 
   console.log("Account balance:", (await owner.getBalance()).toString());
 
-  const task = await ethers.getContractFactory("SafeTransaction");
-  const contract = await task.deploy();
+  const task = await ethers.getContractFactory("NFT");
+  const contract = await task.deploy("f", "a");
 
 
   console.log("Contract address:", contract.address);
