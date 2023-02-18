@@ -8,7 +8,18 @@ const GOEGLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY
 const api_key = process.env.APIKEY
 
 module.exports = {
-  solidity: "0.8.17",
+  solidity: {
+    compilers: [
+      {
+        version: "0.8,0",
+      },
+      {
+        version: "0.8,17",
+        settings: {},
+      },
+    ],
+  },
+
   networks: {
     goerli: {
       url: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,

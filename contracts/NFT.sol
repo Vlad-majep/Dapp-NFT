@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity 0.8.17;
+pragma solidity ^0.8.17;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -11,7 +11,7 @@ contract NFT is ERC721Enumerable, Ownable {
   string public baseURI;
   string public baseExtension = ".json";
   string public notRevealedUri;
-  uint256 public cost = 200000000 gwei;  //цена за минт 1 нфт 0.2 eth
+  uint256 public cost = 0.2 ether;
   uint256 public maxSupply = 100; // количество нфт в вашей коллекции
   uint256 public maxMintAmount = 1; //количество нфт которое можно сминтить при 1 транзакции
   uint256 public nftPerAddressLimit = 5; //максимальное колечество нфт которое может сминтить 1 адрес
