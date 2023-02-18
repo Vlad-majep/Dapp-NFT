@@ -21,13 +21,12 @@ contract NFT is ERC721Enumerable, Ownable {
   address[] public whitelistedAddresses;
   mapping(address => uint256) public addressMintedBalance;
 
+
   constructor(
-    string memory _initBaseURI,
-    string memory _initNotRevealedUri
   ) ERC721("Buble Night Club", "BNC") {
-    setBaseURI(_initBaseURI);
-    setNotRevealedURI(_initNotRevealedUri);
+    setNotRevealedURI("https://ipfs.io/ipfs/QmXvLSHwhZVvjupsiFjBy569DjtvpP8t6pQcbaRSYUyvXT/secret.json");
   }
+
 
   // internal
   function _baseURI() internal view virtual override returns (string memory) {
